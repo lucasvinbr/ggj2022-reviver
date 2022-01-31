@@ -1,0 +1,12 @@
+{
+    "Lua.hint.enable": true,
+    "Lua.hint.setType": true,
+    //"Lua.workspace.preloadFileSize": 1000000000,
+    "Lua.completion.workspaceWord": false,
+    "Lua.runtime.version": "LuaJIT",
+    "Lua.workspace.library": [
+        "../../../urhoEmmyLuaLib"
+    ],
+    "Lua.hover.previewFields": 1000,
+    "Lua.workspace.maxPreload": 10000,
+}

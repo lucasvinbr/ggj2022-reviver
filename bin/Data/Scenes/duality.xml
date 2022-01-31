@@ -1,0 +1,683 @@
+<?xml version="1.0"?>
+<scene id="1">
+	<attribute name="Name" value="" />
+	<attribute name="Time Scale" value="1" />
+	<attribute name="Smoothing Constant" value="50" />
+	<attribute name="Snap Threshold" value="5" />
+	<attribute name="Elapsed Time" value="14.1368" />
+	<attribute name="Next Replicated Node ID" value="81" />
+	<attribute name="Next Replicated Component ID" value="182" />
+	<attribute name="Next Local Node ID" value="16777216" />
+	<attribute name="Next Local Component ID" value="16777216" />
+	<attribute name="Variables" />
+	<attribute name="Variable Names" value="" />
+	<component type="Octree" id="1" />
+	<component type="DebugRenderer" id="2" />
+	<component type="PhysicsWorld2D" id="3">
+		<attribute name="Draw Shape" value="true" />
+		<attribute name="Allow Sleeping" value="true" />
+		<attribute name="Warm Starting" value="true" />
+		<attribute name="Auto Clear Forces" value="true" />
+	</component>
+	<component type="SoundSource" id="12">
+		<attribute name="Sound" value="Sound;Music/duality/gameplayv1.ogg" />
+		<attribute name="Type" value="Music" />
+		<attribute name="Frequency" value="22050" />
+		<attribute name="Gain" value="0.63" />
+		<attribute name="Is Playing" value="true" />
+		<attribute name="Play Position" value="-5795368" />
+	</component>
+	<component type="SoundSource" id="13">
+		<attribute name="Sound" value="Sound;Music/duality/gameplayv2.ogg" />
+		<attribute name="Type" value="Music" />
+		<attribute name="Frequency" value="22050" />
+		<attribute name="Gain" value="0" />
+		<attribute name="Is Playing" value="true" />
+		<attribute name="Play Position" value="-83203576" />
+	</component>
+	<component type="Renderer2D" id="16" />
+	<node id="2">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="levelBounds" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="15 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="10 2.3 1" />
+		<attribute name="Variables" />
+		<component type="RigidBody2D" id="4" />
+		<component type="CollisionBox2D" id="5">
+			<attribute name="Size" value="2 2" />
+			<attribute name="Category Bits" value="1" />
+			<attribute name="Mask Bits" value="65535" />
+		</component>
+	</node>
+	<node id="3">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="levelBounds" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="-15 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="10 2.3 1" />
+		<attribute name="Variables" />
+		<component type="RigidBody2D" id="6" />
+		<component type="CollisionBox2D" id="7">
+			<attribute name="Size" value="2 2" />
+			<attribute name="Category Bits" value="1" />
+			<attribute name="Mask Bits" value="65535" />
+		</component>
+	</node>
+	<node id="4">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="levelBounds" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 12.3 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="5 10 1" />
+		<attribute name="Variables" />
+		<component type="RigidBody2D" id="8" />
+		<component type="CollisionBox2D" id="9">
+			<attribute name="Size" value="2 2" />
+			<attribute name="Category Bits" value="1" />
+			<attribute name="Mask Bits" value="65535" />
+		</component>
+	</node>
+	<node id="5">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="levelBounds" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 -12.3 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="5 10 1" />
+		<attribute name="Variables" />
+		<component type="RigidBody2D" id="10" />
+		<component type="CollisionBox2D" id="11">
+			<attribute name="Size" value="2 2" />
+			<attribute name="Category Bits" value="1" />
+			<attribute name="Mask Bits" value="65535" />
+		</component>
+	</node>
+	<node id="54">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="DynamicContent" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<node id="55">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Player" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="-2 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.2 0.2 0.2" />
+			<attribute name="Variables" />
+			<component type="LuaScriptInstance" id="123">
+				<attribute name="Script Object Type" value="DualityPlayer" />
+				<attribute name="canMove" value="true" />
+				<attribute name="hasAnkh" value="false" />
+				<attribute name="canCountTime" value="true" />
+				<attribute name="bigHeadAnimTimePassed" value="0.750720497220755" />
+				<attribute name="isFlipped" value="false" />
+				<attribute name="flipImmunityTime" value="-0.000174497440457333" />
+			</component>
+			<component type="RigidBody2D" id="125">
+				<attribute name="Body Type" value="Dynamic" />
+				<attribute name="Mass" value="1" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionCircle2D" id="126">
+				<attribute name="Radius" value="1.1" />
+				<attribute name="Category Bits" value="4" />
+				<attribute name="Mask Bits" value="65535" />
+				<attribute name="Friction" value="0" />
+				<attribute name="Restitution" value="0.1" />
+			</component>
+			<node id="56">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="sprite" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="0 0 0" />
+				<attribute name="Rotation" value="1 0 0 0" />
+				<attribute name="Scale" value="2.5 2.5 1" />
+				<attribute name="Variables" />
+				<component type="AnimatedSprite2D" id="124">
+					<attribute name="Layer" value="3" />
+					<attribute name="Entity" value="entity_000" />
+					<attribute name="Animation Set" value="AnimationSet2D;Urho2D/duality/player.scml" />
+					<attribute name="Animation" value="idle" />
+				</component>
+			</node>
+			<node id="57">
+				<attribute name="Is Enabled" value="false" />
+				<attribute name="Name" value="ankhVisualNode" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="0 2 0" />
+				<attribute name="Rotation" value="1 0 0 0" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+				<component type="StaticSprite2D" id="127">
+					<attribute name="Layer" value="4" />
+					<attribute name="Sprite" value="Sprite2D;Urho2D/duality/ankh/Ankh5.png" />
+					<attribute name="Draw Rectangle" value="-0.48 -0.6 0.48 0.6" />
+				</component>
+			</node>
+			<node id="58">
+				<attribute name="Is Enabled" value="false" />
+				<attribute name="Name" value="introHeadNode" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="0 0.5 0" />
+				<attribute name="Rotation" value="1 0 0 0" />
+				<attribute name="Scale" value="200.191 200.191 1" />
+				<attribute name="Variables" />
+				<component type="StaticSprite2D" id="128">
+					<attribute name="Layer" value="5" />
+					<attribute name="Sprite" value="Sprite2D;Urho2D/duality/cabecaEsqueleto.png" />
+					<attribute name="Draw Rectangle" value="-0.28 -0.28 0.28 0.28" />
+					<attribute name="Texture Rectangle" value="8.92857e-07 0.999999 0.999999 8.92857e-07" />
+				</component>
+			</node>
+		</node>
+	</node>
+	<node id="59">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="ContentU" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<node id="61">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="GroundU" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="129">
+				<attribute name="Layer" value="1" />
+				<attribute name="Sprite" value="Sprite2D;Urho2D/duality/parque.png" />
+				<attribute name="Draw Rectangle" value="-6.4 -3.6 6.4 3.6" />
+				<attribute name="Texture Rectangle" value="3.90625e-08 1 1 6.94444e-08" />
+			</component>
+		</node>
+		<node id="62">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Emitter" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1.4 1.4 1" />
+			<attribute name="Variables" />
+			<component type="ParticleEmitter2D" id="130">
+				<attribute name="Layer" value="5" />
+				<attribute name="View Mask" value="1" />
+				<attribute name="Particle Effect" value="ParticleEffect2D;Urho2D/duality/folhas.pex" />
+				<attribute name="Sprite " value="Sprite2D;Urho2D/duality/folha.png" />
+			</component>
+		</node>
+		<node id="65">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="altar" />
+			<attribute name="Tags">
+				<string value="winnerobj" />
+			</attribute>
+			<attribute name="Position" value="-4.45168 0.813276 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.5 0.5 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="135">
+				<attribute name="Layer" value="3" />
+				<attribute name="Sprite" value="Sprite2D;Urho2D/duality/Altar.png" />
+				<attribute name="Color" value="0.954765 0.954765 0.954765 0.954765" />
+				<attribute name="Draw Rectangle" value="-0.48 -0.48 0.48 0.48" />
+				<attribute name="Texture Rectangle" value="5.20833e-07 0.999999 0.999999 5.20833e-07" />
+			</component>
+			<component type="RigidBody2D" id="136">
+				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionCircle2D" id="137">
+				<attribute name="Radius" value="0.5" />
+				<attribute name="Category Bits" value="16" />
+				<attribute name="Mask Bits" value="4" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="67">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="wall" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="-4.45168 0.313276 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.8 0.8 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="139">
+				<attribute name="Layer" value="2" />
+				<attribute name="Sprite" value="Sprite2D;Urho2D/duality/parede.png" />
+				<attribute name="Draw Rectangle" value="-0.25 -0.25 0.25 0.25" />
+				<attribute name="Texture Rectangle" value="1e-06 0.999999 0.999999 1e-06" />
+			</component>
+			<component type="RigidBody2D" id="140">
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionBox2D" id="141">
+				<attribute name="Size" value="0.5 0.5" />
+				<attribute name="Category Bits" value="16" />
+				<attribute name="Mask Bits" value="4" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="68">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="wall" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="-4.95168 0.313276 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.8 0.8 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="142">
+				<attribute name="Layer" value="2" />
+				<attribute name="Sprite" value="Sprite2D;Urho2D/duality/parede.png" />
+				<attribute name="Draw Rectangle" value="-0.25 -0.25 0.25 0.25" />
+				<attribute name="Texture Rectangle" value="1e-06 0.999999 0.999999 1e-06" />
+			</component>
+			<component type="RigidBody2D" id="143">
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionBox2D" id="144">
+				<attribute name="Size" value="0.5 0.5" />
+				<attribute name="Category Bits" value="16" />
+				<attribute name="Mask Bits" value="4" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="69">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="wall" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="-3.95168 0.313276 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.8 0.8 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="145">
+				<attribute name="Layer" value="2" />
+				<attribute name="Sprite" value="Sprite2D;Urho2D/duality/parede.png" />
+				<attribute name="Draw Rectangle" value="-0.25 -0.25 0.25 0.25" />
+				<attribute name="Texture Rectangle" value="1e-06 0.999999 0.999999 1e-06" />
+			</component>
+			<component type="RigidBody2D" id="146">
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionBox2D" id="147">
+				<attribute name="Size" value="0.5 0.5" />
+				<attribute name="Category Bits" value="16" />
+				<attribute name="Mask Bits" value="4" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="70">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="wall" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="-4.45168 1.31328 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.8 0.8 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="148">
+				<attribute name="Layer" value="2" />
+				<attribute name="Sprite" value="Sprite2D;Urho2D/duality/parede.png" />
+				<attribute name="Draw Rectangle" value="-0.25 -0.25 0.25 0.25" />
+				<attribute name="Texture Rectangle" value="1e-06 0.999999 0.999999 1e-06" />
+			</component>
+			<component type="RigidBody2D" id="149">
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionBox2D" id="150">
+				<attribute name="Size" value="0.5 0.5" />
+				<attribute name="Category Bits" value="16" />
+				<attribute name="Mask Bits" value="4" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="71">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="wall" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="-4.95168 1.31328 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.8 0.8 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="151">
+				<attribute name="Layer" value="2" />
+				<attribute name="Sprite" value="Sprite2D;Urho2D/duality/parede.png" />
+				<attribute name="Draw Rectangle" value="-0.25 -0.25 0.25 0.25" />
+				<attribute name="Texture Rectangle" value="1e-06 0.999999 0.999999 1e-06" />
+			</component>
+			<component type="RigidBody2D" id="152">
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionBox2D" id="153">
+				<attribute name="Size" value="0.5 0.5" />
+				<attribute name="Category Bits" value="16" />
+				<attribute name="Mask Bits" value="4" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="72">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="wall" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="-3.95168 1.31328 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.8 0.8 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="154">
+				<attribute name="Layer" value="2" />
+				<attribute name="Sprite" value="Sprite2D;Urho2D/duality/parede.png" />
+				<attribute name="Draw Rectangle" value="-0.25 -0.25 0.25 0.25" />
+				<attribute name="Texture Rectangle" value="1e-06 0.999999 0.999999 1e-06" />
+			</component>
+			<component type="RigidBody2D" id="155">
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionBox2D" id="156">
+				<attribute name="Size" value="0.5 0.5" />
+				<attribute name="Category Bits" value="16" />
+				<attribute name="Mask Bits" value="4" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="73">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="wall" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="-4.95168 0.813276 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.795701 0.795701 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="157">
+				<attribute name="Layer" value="2" />
+				<attribute name="Sprite" value="Sprite2D;Urho2D/duality/parede.png" />
+				<attribute name="Draw Rectangle" value="-0.25 -0.25 0.25 0.25" />
+				<attribute name="Texture Rectangle" value="1e-06 0.999999 0.999999 1e-06" />
+			</component>
+			<component type="RigidBody2D" id="158">
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionBox2D" id="159">
+				<attribute name="Size" value="0.5 0.5" />
+				<attribute name="Category Bits" value="16" />
+				<attribute name="Mask Bits" value="4" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="74">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="wall" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="-3.95168 0.813276 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.8 0.8 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="160">
+				<attribute name="Layer" value="2" />
+				<attribute name="Sprite" value="Sprite2D;Urho2D/duality/parede.png" />
+				<attribute name="Draw Rectangle" value="-0.25 -0.25 0.25 0.25" />
+				<attribute name="Texture Rectangle" value="1e-06 0.999999 0.999999 1e-06" />
+			</component>
+			<component type="RigidBody2D" id="161">
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionBox2D" id="162">
+				<attribute name="Size" value="0.5 0.5" />
+				<attribute name="Category Bits" value="16" />
+				<attribute name="Mask Bits" value="4" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="76">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="portal" />
+			<attribute name="Tags">
+				<string value="portal" />
+			</attribute>
+			<attribute name="Position" value="-0.316019 2.04352 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.6 0.6 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="166">
+				<attribute name="Layer" value="2" />
+				<attribute name="Sprite" value="Sprite2D;Urho2D/duality/buraco.png" />
+				<attribute name="Draw Rectangle" value="-0.8 -0.4 0.8 0.4" />
+				<attribute name="Texture Rectangle" value="3.125e-07 0.999999 1 6.25e-07" />
+			</component>
+			<component type="RigidBody2D" id="167">
+				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionCircle2D" id="168">
+				<attribute name="Radius" value="0.4" />
+				<attribute name="Category Bits" value="16" />
+				<attribute name="Mask Bits" value="4" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="78">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="portal" />
+			<attribute name="Tags">
+				<string value="portal" />
+			</attribute>
+			<attribute name="Position" value="0.577258 -1.30565 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.6 0.6 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="172">
+				<attribute name="Layer" value="2" />
+				<attribute name="Sprite" value="Sprite2D;Urho2D/duality/buraco.png" />
+				<attribute name="Draw Rectangle" value="-0.8 -0.4 0.8 0.4" />
+				<attribute name="Texture Rectangle" value="3.125e-07 0.999999 1 6.25e-07" />
+			</component>
+			<component type="RigidBody2D" id="173">
+				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionCircle2D" id="174">
+				<attribute name="Radius" value="0.4" />
+				<attribute name="Category Bits" value="16" />
+				<attribute name="Mask Bits" value="4" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="80">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="portal" />
+			<attribute name="Tags">
+				<string value="portal" />
+			</attribute>
+			<attribute name="Position" value="4.66193 0.75446 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.6 0.6 1" />
+			<attribute name="Variables" />
+			<component type="AnimatedSprite2D" id="178">
+				<attribute name="Layer" value="2" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/duality/enemies/coco.scml" />
+				<attribute name="Animation" value="idle" />
+			</component>
+			<component type="RigidBody2D" id="179">
+				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionCircle2D" id="180">
+				<attribute name="Radius" value="0.4" />
+				<attribute name="Category Bits" value="16" />
+				<attribute name="Mask Bits" value="4" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+	</node>
+	<node id="60">
+		<attribute name="Is Enabled" value="false" />
+		<attribute name="Name" value="ContentF" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<node id="63">
+			<attribute name="Is Enabled" value="false" />
+			<attribute name="Name" value="GroundF" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="131">
+				<attribute name="Layer" value="1" />
+				<attribute name="Sprite" value="Sprite2D;Urho2D/duality/cemiterio.png" />
+				<attribute name="Draw Rectangle" value="-6.4 -3.6 6.4 3.6" />
+			</component>
+		</node>
+		<node id="64">
+			<attribute name="Is Enabled" value="false" />
+			<attribute name="Name" value="ankh" />
+			<attribute name="Tags">
+				<string value="ankh" />
+			</attribute>
+			<attribute name="Position" value="2.42121 -1.37981 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.5 0.5 1" />
+			<attribute name="Variables" />
+			<component type="AnimatedSprite2D" id="132">
+				<attribute name="Layer" value="3" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/duality/ankh.scml" />
+				<attribute name="Animation" value="idle" />
+			</component>
+			<component type="RigidBody2D" id="133">
+				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionCircle2D" id="134">
+				<attribute name="Radius" value="0.5" />
+				<attribute name="Category Bits" value="32" />
+				<attribute name="Mask Bits" value="8" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="66">
+			<attribute name="Is Enabled" value="false" />
+			<attribute name="Name" value="altarShadow" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="-4.45168 0.813276 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.5 0.5 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="138">
+				<attribute name="Layer" value="3" />
+				<attribute name="Sprite" value="Sprite2D;Urho2D/duality/Altar.png" />
+				<attribute name="Color" value="0 0 0 0.954765" />
+				<attribute name="Draw Rectangle" value="-0.48 -0.48 0.48 0.48" />
+			</component>
+		</node>
+		<node id="75">
+			<attribute name="Is Enabled" value="false" />
+			<attribute name="Name" value="portal" />
+			<attribute name="Tags">
+				<string value="portal" />
+			</attribute>
+			<attribute name="Position" value="-1.29637 -1.03726 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.6 0.6 1" />
+			<attribute name="Variables" />
+			<component type="AnimatedSprite2D" id="163">
+				<attribute name="Layer" value="2" />
+				<attribute name="Entity" value="entity_000" />
+				<attribute name="Animation Set" value="AnimationSet2D;Urho2D/duality/enemies/fogoAzul.scml" />
+				<attribute name="Animation" value="idle" />
+			</component>
+			<component type="RigidBody2D" id="164">
+				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionCircle2D" id="165">
+				<attribute name="Radius" value="0.4" />
+				<attribute name="Category Bits" value="32" />
+				<attribute name="Mask Bits" value="8" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="77">
+			<attribute name="Is Enabled" value="false" />
+			<attribute name="Name" value="portal" />
+			<attribute name="Tags">
+				<string value="portal" />
+			</attribute>
+			<attribute name="Position" value="-0.248686 2.11661 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.6 0.6 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="169">
+				<attribute name="Layer" value="2" />
+				<attribute name="Sprite" value="Sprite2D;Urho2D/duality/buraco.png" />
+				<attribute name="Draw Rectangle" value="-0.8 -0.4 0.8 0.4" />
+			</component>
+			<component type="RigidBody2D" id="170">
+				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionCircle2D" id="171">
+				<attribute name="Radius" value="0.4" />
+				<attribute name="Category Bits" value="32" />
+				<attribute name="Mask Bits" value="8" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+		<node id="79">
+			<attribute name="Is Enabled" value="false" />
+			<attribute name="Name" value="portal" />
+			<attribute name="Tags">
+				<string value="portal" />
+			</attribute>
+			<attribute name="Position" value="1.34542 1.8745 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.6 0.6 1" />
+			<attribute name="Variables" />
+			<component type="StaticSprite2D" id="175">
+				<attribute name="Layer" value="2" />
+				<attribute name="Sprite" value="Sprite2D;Urho2D/duality/buraco.png" />
+				<attribute name="Draw Rectangle" value="-0.8 -0.4 0.8 0.4" />
+			</component>
+			<component type="RigidBody2D" id="176">
+				<attribute name="Body Type" value="Kinematic" />
+				<attribute name="Allow Sleep" value="false" />
+				<attribute name="Gravity Scale" value="0" />
+			</component>
+			<component type="CollisionCircle2D" id="177">
+				<attribute name="Radius" value="0.4" />
+				<attribute name="Category Bits" value="32" />
+				<attribute name="Mask Bits" value="8" />
+				<attribute name="Friction" value="0.8" />
+			</component>
+		</node>
+	</node>
+</scene>

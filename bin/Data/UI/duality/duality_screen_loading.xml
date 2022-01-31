@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<element>
+	<attribute name="Name" value="Loading" />
+	<attribute name="Size" value="1920 1017" />
+	<attribute name="Max Anchor" value="1 1" />
+	<attribute name="Pivot" value="0 0" />
+	<attribute name="Enable Anchor" value="true" />
+	<element type="BorderImage">
+		<attribute name="Name" value="bg" />
+		<attribute name="Size" value="1920 1017" />
+		<attribute name="Max Anchor" value="1 1" />
+		<attribute name="Pivot" value="0 0" />
+		<attribute name="Enable Anchor" value="true" />
+		<attribute name="Color" value="0.05 0 0 1" />
+		<attribute name="Top Left Color" value="0.05 0 0 1" />
+		<attribute name="Top Right Color" value="0.05 0 0 1" />
+		<attribute name="Bottom Left Color" value="0.05 0 0 1" />
+		<attribute name="Bottom Right Color" value="0.05 0 0 1" />
+		<attribute name="Layout Mode" value="Vertical" />
+		<attribute name="Texture" value="Texture2D;Urho2D/duality/screens/tela_inicial.png" />
+		<attribute name="Image Rect" value="0 0 1097 653" />
+	</element>
+</element>

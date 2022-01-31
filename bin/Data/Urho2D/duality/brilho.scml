@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="b8_1">
+    <folder id="0" name="duality/brilho">
+        <file id="0" name="brilho/Brilho1.png" width="96" height="96" pivot_x="0.5" pivot_y="0.5"/>
+		<file id="1" name="brilho/Brilho2.png" width="96" height="96" pivot_x="0.5" pivot_y="0.5"/>
+		<file id="2" name="brilho/Brilho3.png" width="96" height="96" pivot_x="0.5" pivot_y="0.5"/>
+		<file id="3" name="brilho/Brilho4.png" width="96" height="96" pivot_x="0.5" pivot_y="0.5"/>
+		<file id="4" name="brilho/Brilho5.png" width="96" height="96" pivot_x="0.5" pivot_y="0.5"/>
+		<file id="5" name="brilho/Brilho6.png" width="96" height="96" pivot_x="0.5" pivot_y="0.5"/>
+		<file id="6" name="brilho/Brilho7.png" width="96" height="96" pivot_x="0.5" pivot_y="0.5"/>
+    </folder>
+    <entity id="0" name="entity_000">
+		<animation id="0" name="idle" length="420">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                </key>
+				<key id="1" time="60">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                </key>
+				<key id="2" time="120">
+                    <object_ref id="0" timeline="0" key="2" z_index="0"/>
+                </key>
+				<key id="3" time="180">
+                    <object_ref id="0" timeline="0" key="3" z_index="0"/>
+                </key>
+				<key id="4" time="240">
+                    <object_ref id="0" timeline="0" key="4" z_index="0"/>
+                </key>
+				<key id="5" time="300">
+                    <object_ref id="0" timeline="0" key="5" z_index="0"/>
+                </key>
+				<key id="6" time="360">
+                    <object_ref id="0" timeline="0" key="6" z_index="0"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="1">
+				<key id="0" spin="0">
+                    <object folder="0" file="0" angle="0"/>
+                </key>
+                <key id="1" time="60">
+                    <object folder="0" file="1" angle="0"/>
+                </key>
+				<key id="2" time="120">
+                    <object folder="0" file="2" angle="0"/>
+                </key>
+				<key id="3" time="180">
+                    <object folder="0" file="3" angle="0"/>
+                </key>
+				<key id="4" time="240">
+                    <object folder="0" file="4" angle="0"/>
+                </key>
+				<key id="5" time="300">
+                    <object folder="0" file="5" angle="0"/>
+                </key>
+				<key id="6" time="360">
+                    <object folder="0" file="6" angle="0"/>
+                </key>
+			</timeline>
+        </animation>
+    </entity>
+</spriter_data>
