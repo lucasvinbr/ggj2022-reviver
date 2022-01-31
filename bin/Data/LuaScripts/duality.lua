@@ -52,7 +52,7 @@ function SetupUI()
 end
 
 function SetWindowTitleAndIcon()
-    local icon = cache:GetResource("Image", "Urho2D/Duality/gameIcon.ico")
+    local icon = cache:GetResource("Image", "Urho2D/duality/gameIcon.png")
     graphics:SetWindowIcon(icon)
     graphics.windowTitle = "Reviver"
 end
