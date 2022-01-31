@@ -63,7 +63,7 @@ LevelTimeLeft = 0
 
 TimeForCurrentLevel = 15.0
 
-TimesWon = 15
+TimesWon = 0
 
 
 GAMESTATE_ENDED = 1
