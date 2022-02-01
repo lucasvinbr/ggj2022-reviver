@@ -8,7 +8,7 @@ Team:
 
 Targa89 - Sound effects / Music
 
-Guilherme Sadao (https://flutumusic.com/) - Game design / Art
+Guilherme Sadao - Game design / Art
 
 Andréa Fernandes (https://andreafernandes1969.myportfolio.com/) - Art
 
