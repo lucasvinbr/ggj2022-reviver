@@ -4,7 +4,7 @@ cmake_minimum_required (VERSION 3.10.2)
 # Set project name
 project (Duality)
 # Set CMake modules search path
-set (CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMake/Modules)
+set (CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/Modules)
 # Include UrhoCommon.cmake module after setting project name
 include (UrhoCommon)
 # Define target name
