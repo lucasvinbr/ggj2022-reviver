@@ -52,8 +52,10 @@ function DualityPlayer:Start()
 
     ---@type StaticSprite2D
     local ankhSprite = self.ankhVisualNode:CreateComponent("StaticSprite2D")
-    ankhSprite.sprite = cache:GetResource("Sprite2D", "Urho2D/duality/ankh/Ankh5.png")
+    ankhSprite.sprite = cache:GetResource("Sprite2D", "Urho2D/duality/ankh/ankh_static.png")
     ankhSprite:SetLayer(4)
+
+    self.ankhVisualNode:SetScale2D(1.5, 1.0)
 
     -- hide ankh visual until the plyr gets the ankh
     self.ankhVisualNode:SetEnabled(false)
