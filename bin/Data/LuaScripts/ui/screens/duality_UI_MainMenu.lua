@@ -33,6 +33,10 @@ Ui.Setup = function (instanceRoot)
         engine:Exit()
     end)
 
+    if GetPlatform() == "Web" then
+        buttonQuit:SetVisible(false)
+    end
+
 end
 
 ---@param instanceRoot UIElement
