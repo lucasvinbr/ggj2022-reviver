@@ -91,20 +91,20 @@ function CreateScene()
     boundaryShape:SetCategoryBits(COLMASK_WORLD)
     boundaryShape:SetSize(2.0, 2.0)
 
-    rightBoundary.position2D = Vector2(WORLD_BOUNDS_UNSCALED.x * SCALE_WORLD.x + boundaryThickness, 0)
-    rightBoundary:SetScale2D(Vector2(boundaryThickness, WORLD_BOUNDS_UNSCALED.y * SCALE_WORLD.y))
+    rightBoundary.position2D = Vector2(WORLD_BOUNDS_UNSCALED.x + boundaryThickness, 0)
+    rightBoundary:SetScale2D(Vector2(boundaryThickness, WORLD_BOUNDS_UNSCALED.y))
 
     local leftBoundary = rightBoundary:Clone()
-    leftBoundary.position2D = Vector2(-WORLD_BOUNDS_UNSCALED.x * SCALE_WORLD.x - boundaryThickness, 0)
-    leftBoundary:SetScale2D(Vector2(boundaryThickness, WORLD_BOUNDS_UNSCALED.y * SCALE_WORLD.y))
+    leftBoundary.position2D = Vector2(-WORLD_BOUNDS_UNSCALED.x - boundaryThickness, 0)
+    leftBoundary:SetScale2D(Vector2(boundaryThickness, WORLD_BOUNDS_UNSCALED.y))
 
     local topBoundary = rightBoundary:Clone()
-    topBoundary.position2D = Vector2(0, WORLD_BOUNDS_UNSCALED.y * SCALE_WORLD.y + boundaryThickness)
-    topBoundary:SetScale2D(Vector2(WORLD_BOUNDS_UNSCALED.x * SCALE_WORLD.x, boundaryThickness))
+    topBoundary.position2D = Vector2(0, WORLD_BOUNDS_UNSCALED.y + boundaryThickness)
+    topBoundary:SetScale2D(Vector2(WORLD_BOUNDS_UNSCALED.x, boundaryThickness))
 
     local bottomBoundary = rightBoundary:Clone()
-    bottomBoundary.position2D = Vector2(0, -WORLD_BOUNDS_UNSCALED.y * SCALE_WORLD.y - boundaryThickness)
-    bottomBoundary:SetScale2D(Vector2(WORLD_BOUNDS_UNSCALED.x * SCALE_WORLD.x, boundaryThickness))
+    bottomBoundary.position2D = Vector2(0, -WORLD_BOUNDS_UNSCALED.y - boundaryThickness)
+    bottomBoundary:SetScale2D(Vector2(WORLD_BOUNDS_UNSCALED.x, boundaryThickness))
 
 
 end

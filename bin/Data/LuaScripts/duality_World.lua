@@ -30,7 +30,7 @@ TAG_PORTAL = "portal"
 TAG_ANKH = "ankh"
 TAG_WIN_OBJ = "winnerobj"
 
-SCALE_WORLD = Vector2(1.0, 1.0)
+SCALE_WORLD = Vector2(1.23, 1.35)
 
 
 -- assuming world is a square
@@ -132,7 +132,7 @@ function CreateLevel()
     local unflippedGroundSprite = unflippedGround:CreateComponent("StaticSprite2D")
     unflippedGroundSprite.sprite = cache:GetResource("Sprite2D", "Urho2D/duality/parque.png")
     unflippedGroundSprite:SetLayer(1)
-    -- unflippedGround:SetScale2D(SCALE_WORLD)
+    unflippedGround:SetScale2D(SCALE_WORLD)
 
     local unflippedDecoParticlesNode = UnflippedScenarioContentParent:CreateChild("Emitter")
     unflippedDecoParticlesNode:SetScale2D(Vector2.ONE * 1.4)
@@ -148,7 +148,7 @@ function CreateLevel()
     local flippedGroundSprite = flippedGround:CreateComponent("StaticSprite2D")
     flippedGroundSprite.sprite = cache:GetResource("Sprite2D", "Urho2D/duality/cemiterio.png")
     flippedGroundSprite:SetLayer(1)
-    -- flippedGround:SetScale2D(SCALE_WORLD)
+    flippedGround:SetScale2D(SCALE_WORLD)
   
     CreateAnkh(GetRandomPositionInWorld(), true)
     table.insert(flippedElements, ankhNode)
@@ -596,8 +596,8 @@ function GetRandomPositionInWorld(repulsors, extraPaddingFromBounds)
     local attempts = 0
     local padding = 0.1
     local pickedPos = Vector2(
-        Random((-WORLD_BOUNDS_UNSCALED.x * SCALE_WORLD.x) + padding + extraPaddingFromBounds, (WORLD_BOUNDS_UNSCALED.x * SCALE_WORLD.x) - padding - extraPaddingFromBounds),
-        Random((-WORLD_BOUNDS_UNSCALED.y * SCALE_WORLD.y) + padding + extraPaddingFromBounds, (WORLD_BOUNDS_UNSCALED.y * SCALE_WORLD.y) - padding - extraPaddingFromBounds)
+        Random((-WORLD_BOUNDS_UNSCALED.x) + padding + extraPaddingFromBounds, (WORLD_BOUNDS_UNSCALED.x) - padding - extraPaddingFromBounds),
+        Random((-WORLD_BOUNDS_UNSCALED.y) + padding + extraPaddingFromBounds, (WORLD_BOUNDS_UNSCALED.y) - padding - extraPaddingFromBounds)
     )
     local positionIsValid = true
 
@@ -617,7 +617,7 @@ function GetRandomPositionInWorld(repulsors, extraPaddingFromBounds)
         if positionIsValid then
             break
         else
-            pickedPos = Vector2(Random(-WORLD_BOUNDS_UNSCALED.x * SCALE_WORLD.x, WORLD_BOUNDS_UNSCALED.x * SCALE_WORLD.x), Random(-WORLD_BOUNDS_UNSCALED.y * SCALE_WORLD.y, WORLD_BOUNDS_UNSCALED.y * SCALE_WORLD.y))
+            pickedPos = Vector2(Random(-WORLD_BOUNDS_UNSCALED.x, WORLD_BOUNDS_UNSCALED.x), Random(-WORLD_BOUNDS_UNSCALED.y, WORLD_BOUNDS_UNSCALED.y))
             attempts = attempts + 1
         end
 
