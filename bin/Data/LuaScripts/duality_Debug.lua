@@ -14,7 +14,9 @@ local function DualityDebugHandleKeyUp(eventType, eventData)
         if console:IsVisible() then
             console:SetVisible(false)
         else
-            engine:Exit()
+            if GetPlatform() ~= "Web" then
+                engine:Exit()
+            end
         end
     end
 end
