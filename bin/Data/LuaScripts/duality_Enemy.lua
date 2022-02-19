@@ -74,6 +74,7 @@ function DualityEnemy:SetupFlipDependentData(isFlipped)
         if enemyData.isNoClip then
             self.collisionShape:SetMaskBits(COLMASK_PLAYER_FLIPPED)
         else
+            self.rigidbody.bodyType = BT_DYNAMIC
             self.collisionShape:SetMaskBits(COLMASK_PLAYER_FLIPPED + COLMASK_OBJS_FLIPPED)
         end
     else
@@ -84,6 +85,7 @@ function DualityEnemy:SetupFlipDependentData(isFlipped)
         if enemyData.isNoClip then
             self.collisionShape:SetMaskBits(COLMASK_PLAYER)
         else
+            self.rigidbody.bodyType = BT_DYNAMIC
             self.collisionShape:SetMaskBits(COLMASK_PLAYER + COLMASK_OBJS)
         end
     end

@@ -240,10 +240,10 @@ function CreateWall(position, isInFlippedWorld)
     collisionShape:SetFriction(0.8)
     if isInFlippedWorld then
         collisionShape:SetCategoryBits(COLMASK_OBJS_FLIPPED)
-        collisionShape:SetMaskBits(COLMASK_PLAYER_FLIPPED)
+        --collisionShape:SetMaskBits(COLMASK_PLAYER_FLIPPED)
     else
         collisionShape:SetCategoryBits(COLMASK_OBJS)
-        collisionShape:SetMaskBits(COLMASK_PLAYER)
+        --collisionShape:SetMaskBits(COLMASK_PLAYER)
     end
 
     wallNode:SetScale2D(Vector2.ONE * 0.8)
@@ -295,10 +295,10 @@ function CreatePortal(position, isInFlippedWorld)
     collisionShape:SetFriction(0.8)
     if isInFlippedWorld then
         collisionShape:SetCategoryBits(COLMASK_OBJS_FLIPPED)
-        collisionShape:SetMaskBits(COLMASK_PLAYER_FLIPPED)
+        --collisionShape:SetMaskBits(COLMASK_PLAYER_FLIPPED)
     else
         collisionShape:SetCategoryBits(COLMASK_OBJS)
-        collisionShape:SetMaskBits(COLMASK_PLAYER)
+        --collisionShape:SetMaskBits(COLMASK_PLAYER)
     end
 
     portalNode:SetScale2D(Vector2.ONE * 0.6)
@@ -346,10 +346,10 @@ function CreateObstacle(position, isInFlippedWorld)
     collisionShape:SetFriction(0.8)
     if isInFlippedWorld then
         collisionShape:SetCategoryBits(COLMASK_OBJS_FLIPPED)
-        collisionShape:SetMaskBits(COLMASK_PLAYER_FLIPPED)
+        --collisionShape:SetMaskBits(COLMASK_PLAYER_FLIPPED)
     else
         collisionShape:SetCategoryBits(COLMASK_OBJS)
-        collisionShape:SetMaskBits(COLMASK_PLAYER)
+        --collisionShape:SetMaskBits(COLMASK_PLAYER)
     end
 
     obstacleNode:SetScale2D(Vector2.ONE * 1.2)
@@ -381,7 +381,7 @@ function CreateAnkh(position, isInFlippedWorld)
     local animatedSprite = ankhNode:CreateComponent("AnimatedSprite2D")
     animatedSprite.animationSet = cache:GetResource("AnimationSet2D", "Urho2D/duality/ankh.scml")
     animatedSprite.animation = "idle"
-    animatedSprite:SetLayer(3)
+    animatedSprite:SetLayer(4)
 
     ---@type RigidBody2D
     local rigidbody = ankhNode:CreateComponent("RigidBody2D")
@@ -426,7 +426,7 @@ function CreateAltar(position, isInFlippedWorld)
     ---@type StaticSprite2D
     altarSprite = altarNode:CreateComponent("StaticSprite2D")
     altarSprite.sprite = cache:GetResource("Sprite2D", "Urho2D/duality/Altar.png")
-    altarSprite:SetLayer(3)
+    altarSprite:SetLayer(4)
 
     ---@type RigidBody2D
     local rigidbody = altarNode:CreateComponent("RigidBody2D")
@@ -463,7 +463,7 @@ function CreateAltar(position, isInFlippedWorld)
     ---@type StaticSprite2D
     altarShadowSprite = altarShadowNode:CreateComponent("StaticSprite2D")
     altarShadowSprite.sprite = cache:GetResource("Sprite2D", "Urho2D/duality/Altar.png")
-    altarShadowSprite:SetLayer(3)
+    altarShadowSprite:SetLayer(4)
 
     altarShadowNode:SetScale2D(Vector2.ONE * altarScaleFactor)
 

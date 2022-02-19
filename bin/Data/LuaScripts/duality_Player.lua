@@ -30,7 +30,7 @@ function DualityPlayer:Start()
     self.animatedSprite = spriteNode:CreateComponent("AnimatedSprite2D")
     self.animatedSprite.animationSet = cache:GetResource("AnimationSet2D", "Urho2D/duality/player.scml")
     self.animatedSprite.animation = "idle"
-    self.animatedSprite:SetLayer(3) -- Put character over tile map (which is on layer 0)
+    self.animatedSprite:SetLayer(4)
 
     spriteNode:SetScale2D(Vector2.ONE * 2.5)
 
