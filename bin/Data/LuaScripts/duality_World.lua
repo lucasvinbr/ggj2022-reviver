@@ -107,6 +107,21 @@ local flippedPortalDatas = {
     {isAnimated = false, filePath = "Urho2D/duality/espinhos.png"},
 }
 
+
+local unflippedObstacleDatas = {
+    "Urho2D/duality/static_obstacles/unflip/3arvorezinhas.png",
+    "Urho2D/duality/static_obstacles/unflip/4arvorezinhas.png",
+    "Urho2D/duality/static_obstacles/unflip/arvores.png",
+    "Urho2D/duality/static_obstacles/unflip/arvorezinha.png",
+    "Urho2D/duality/static_obstacles/unflip/banco.png",
+}
+
+local flippedObstacleDatas = {
+    "Urho2D/duality/static_obstacles/flip/arvores_mortas.png",
+    "Urho2D/duality/static_obstacles/flip/cruzElapides.png",
+    "Urho2D/duality/static_obstacles/flip/tumulosPretos.png"
+}
+
 function CreateLevel()
 
     log:Write(LOG_DEBUG, TimesWon)
@@ -168,6 +183,14 @@ function CreateLevel()
 
     for _ = 4, TimesWon, 2 do
         CreateEnemy(GetRandomPositionInWorld(unflippedElements), false)
+    end
+
+    for _ = 6, TimesWon, 2 do
+        CreateObstacle(GetRandomPositionInWorld(unflippedElements), false)
+    end
+
+    for _ = 7, TimesWon, 2 do
+        CreateObstacle(GetRandomPositionInWorld(flippedElements), true)
     end
 
     DualityPlayerScript:SetupBigHeadAnim()
@@ -262,7 +285,7 @@ function CreatePortal(position, isInFlippedWorld)
 
     ---@type RigidBody2D
     local rigidbody = portalNode:CreateComponent("RigidBody2D")
-    rigidbody.bodyType = BT_KINEMATIC
+    rigidbody.bodyType = BT_STATIC
     rigidbody.allowSleep = false
     rigidbody:SetGravityScale(0.0)
 
@@ -284,6 +307,57 @@ function CreatePortal(position, isInFlippedWorld)
        table.insert(flippedElements, portalNode)
     else
         table.insert(unflippedElements, portalNode)
+    end
+    
+end
+
+function CreateObstacle(position, isInFlippedWorld)
+    local parent = nil
+    ---@type string
+    local imagePath = nil
+
+    if isInFlippedWorld then
+        parent = FlippedScenarioContentParent
+        imagePath = flippedObstacleDatas[RandomInt(1, #flippedObstacleDatas + 1)]
+    else
+        parent = UnflippedScenarioContentParent
+        imagePath = unflippedObstacleDatas[RandomInt(1, #unflippedObstacleDatas + 1)]
+    end
+
+    local obstacleNode = parent:CreateChild("obstacle")
+
+    obstacleNode.position2D = position
+
+    ---@type StaticSprite2D
+    local obstacleSprite = obstacleNode:CreateComponent("StaticSprite2D")
+    obstacleSprite.sprite = cache:GetResource("Sprite2D", imagePath)
+    obstacleSprite:SetLayer(2)
+
+
+    ---@type RigidBody2D
+    local rigidbody = obstacleNode:CreateComponent("RigidBody2D")
+    rigidbody.bodyType = BT_STATIC
+    rigidbody.allowSleep = false
+    rigidbody:SetGravityScale(0.0)
+
+    ---@type CollisionCircle2D
+    local collisionShape = obstacleNode:CreateComponent("CollisionCircle2D")
+    collisionShape:SetRadius(0.25)
+    collisionShape:SetFriction(0.8)
+    if isInFlippedWorld then
+        collisionShape:SetCategoryBits(COLMASK_OBJS_FLIPPED)
+        collisionShape:SetMaskBits(COLMASK_PLAYER_FLIPPED)
+    else
+        collisionShape:SetCategoryBits(COLMASK_OBJS)
+        collisionShape:SetMaskBits(COLMASK_PLAYER)
+    end
+
+    obstacleNode:SetScale2D(Vector2.ONE * 1.2)
+
+    if isInFlippedWorld then
+       table.insert(flippedElements, obstacleNode)
+    else
+        table.insert(unflippedElements, obstacleNode)
     end
     
 end
