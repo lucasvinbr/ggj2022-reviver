@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<element>
+	<attribute name="Name" value="Cravei" />
+	<attribute name="Size" value="1920 1017" />
+	<attribute name="Max Anchor" value="1 1" />
+	<attribute name="Pivot" value="0 0" />
+	<attribute name="Enable Anchor" value="true" />
+	<element type="BorderImage">
+		<attribute name="Name" value="bg" />
+		<attribute name="Size" value="1920 1017" />
+		<attribute name="Max Anchor" value="1 1" />
+		<attribute name="Pivot" value="0 0" />
+		<attribute name="Enable Anchor" value="true" />
+		<attribute name="Texture" value="Texture2D;Urho2D/duality/screens/cravei.png" />
+		<attribute name="Image Rect" value="0 0 1024 512" />
+		<element type="Button">
+			<attribute name="Name" value="ButtonPlay" />
+			<attribute name="Size" value="1920 1017" />
+			<attribute name="Min Size" value="0 80" />
+			<attribute name="Max Anchor" value="1 1" />
+			<attribute name="Pivot" value="0 0" />
+			<attribute name="Enable Anchor" value="true" />
+			<attribute name="Color" value="1 1 1 0" />
+			<attribute name="Top Left Color" value="1 1 1 0" />
+			<attribute name="Top Right Color" value="1 1 1 0" />
+			<attribute name="Bottom Left Color" value="1 1 1 0" />
+			<attribute name="Bottom Right Color" value="1 1 1 0" />
+			<attribute name="Image Rect" value="16 0 32 16" />
+			<attribute name="Border" value="4 4 4 4" />
+			<attribute name="Hover Image Offset" value="0 16" />
+			<attribute name="Pressed Image Offset" value="16 0" />
+			<attribute name="Pressed Child Offset" value="-1 1" />
+		</element>
+		<element type="Text">
+			<attribute name="Name" value="pointsText" />
+			<attribute name="Min Anchor" value="0.71 0.58" />
+			<attribute name="Max Anchor" value="1 1" />
+			<attribute name="Pivot" value="1 1" />
+			<attribute name="Enable Anchor" value="true" />
+			<attribute name="Top Left Color" value="0.85 0.85 0.85 1" />
+			<attribute name="Top Right Color" value="0.85 0.85 0.85 1" />
+			<attribute name="Bottom Left Color" value="0.85 0.85 0.85 1" />
+			<attribute name="Bottom Right Color" value="0.85 0.85 0.85 1" />
+			<attribute name="Font Size" value="250" />
+			<attribute name="Text" value="999" />
+			<attribute name="Text Alignment" value="Center" />
+		</element>
+	</element>
+</element>

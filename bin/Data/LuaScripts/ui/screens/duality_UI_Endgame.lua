@@ -29,7 +29,6 @@ end
 Ui.Show = function (instanceRoot, dataPassed)
 
     if dataPassed.hasWon then
-        TimesWon = TimesWon + 1
         uiManager.ShowUI("Loading")
         return
     end

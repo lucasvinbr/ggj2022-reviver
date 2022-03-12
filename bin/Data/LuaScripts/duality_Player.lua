@@ -217,7 +217,14 @@ function DualityPlayer:HandleCollisionStart(eventType, eventData)
         self.animatedSprite:SetAnimation("idle_flipped")
         coroutine.start(function ()
             coroutine.sleep(0.5)
-            self:SetupBigHeadAnim()
+
+            if (TimesWon + 1) % SHOW_CRAVEI_LEVEL_INTERVAL == 0 then
+                -- do the cravei anim instead of the head anim!
+                EndGame(true)
+            else
+                self:SetupBigHeadAnim()
+            end
+
         end)
     end
 end

@@ -11,6 +11,8 @@ MIN_TIME_PER_LEVEL = 5.0
 
 MIN_TIME_LEVEL = 40
 
+SHOW_CRAVEI_LEVEL_INTERVAL = 10 -- every x levels we show the "cravei" screen
+
 PLAYER_FLIP_IMMUNE_INTERVAL = 0.2
 
 
@@ -85,6 +87,9 @@ UnflippedScenarioContentParent = nil
 ---@type Node
 FlippedScenarioContentParent = nil
 
+---@type Node
+local craveiContent = nil
+
 
 local flippedElements = {}
 local unflippedElements = {}
@@ -121,6 +126,13 @@ local flippedObstacleDatas = {
     "Urho2D/duality/static_obstacles/flip/cruzElapides.png",
     "Urho2D/duality/static_obstacles/flip/tumulosPretos.png"
 }
+
+
+function SetupCraveiContent()
+    ---@type Node
+    craveiContent = Scene_:InstantiateXML("Data/Objects/duality/cravei_content.xml", Vector3.ZERO, Quaternion.IDENTITY)
+    craveiContent:SetScale(0)
+end
 
 function CreateLevel()
 
@@ -604,13 +616,71 @@ function EndGame(victory)
             hasWon = victory
         }
 
-        if not victory then
+        if victory then
+            TimesWon = TimesWon + 1
+        else
             PlayOneShotSound("Music/duality/gameplaytransition.ogg", 0.65, 0)
         end
 
-        uiManager.ShowUI("Endgame", gameEndData)
+        if TimesWon % SHOW_CRAVEI_LEVEL_INTERVAL == 0 then
+            DoCraveiProcedure()
+        else
+            uiManager.ShowUI("Endgame", gameEndData)
+        end
+        
     end
 end
+
+
+function DoCraveiProcedure()
+    coroutine.start(function()
+        local curTime = time:GetElapsedTime()
+        local animStartTime = curTime
+        local animEndTime = curTime + 2.5
+
+        local transitionDuration = 0.75
+        local dancingFlipInterval = 0.25
+        local timeNextDancingFlip = curTime + dancingFlipInterval
+        local craveiDancingGuyNode = craveiContent:GetChild("craveiDancingGuy")
+        ---@type StaticSprite2D
+        local craveiDancingGuySprite = craveiDancingGuyNode:GetComponent("StaticSprite2D")
+
+        local craveiScoreTextNode = craveiContent:GetChild("craveiScoreText")
+        ---@type Text3D
+        local craveiScoreText = craveiScoreTextNode:GetComponent("Text3D")
+        craveiScoreText:SetText(TimesWon)
+
+        while curTime < animEndTime do
+            coroutine.sleep(0.01)
+            curTime = time:GetElapsedTime()
+
+            local animTimeLeft = animEndTime - curTime
+            local animTimeElapsed = curTime - animStartTime
+            
+            -- cravei transition in anim
+            if animTimeElapsed < transitionDuration then
+                craveiContent:SetScale(animTimeElapsed / transitionDuration)
+            end
+
+            -- cravei transition out anim
+            if animTimeLeft < transitionDuration then
+                craveiContent:SetScale(animTimeLeft / transitionDuration)
+            end
+
+            -- dancing guy's dance!
+            if curTime > timeNextDancingFlip then
+                craveiDancingGuySprite.flipX = not craveiDancingGuySprite.flipX
+                timeNextDancingFlip = curTime + dancingFlipInterval
+            end
+        end
+
+        craveiContent:SetScale(0.0)
+
+        uiManager.ShowUI("Endgame", { hasWon = true })
+
+    end)
+end
+
 
 function Cleanup()
     if DynamicContentParent ~= nil then

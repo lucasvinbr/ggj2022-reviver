@@ -58,6 +58,7 @@ function SetWindowTitleAndIcon()
 end
 
 function CreateScene()
+    ---@type Scene
     Scene_ = Scene()
 
     -- Create the Octree, DebugRenderer and PhysicsWorld2D components to the scene
@@ -68,6 +69,7 @@ function CreateScene()
 
     -- Create camera
     CameraNode = Node()
+    CameraNode:SetPosition(Vector3.BACK)
     ---@type Camera
     DualityCamera = CameraNode:CreateComponent("Camera")
     DualityCamera.orthographic = true
@@ -106,6 +108,7 @@ function CreateScene()
     bottomBoundary.position2D = Vector2(0, -WORLD_BOUNDS_UNSCALED.y - boundaryThickness)
     bottomBoundary:SetScale2D(Vector2(WORLD_BOUNDS_UNSCALED.x, boundaryThickness))
 
+    SetupCraveiContent()
 
 end
 
