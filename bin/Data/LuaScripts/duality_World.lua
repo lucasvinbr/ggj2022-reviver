@@ -131,7 +131,9 @@ local flippedObstacleDatas = {
 function SetupCraveiContent()
     ---@type Node
     craveiContent = Scene_:InstantiateXML("Data/Objects/duality/cravei_content.xml", Vector3.ZERO, Quaternion.IDENTITY)
-    craveiContent:SetScale(0)
+    if craveiContent then
+        craveiContent:SetScale(0)
+    end
 end
 
 function CreateLevel()

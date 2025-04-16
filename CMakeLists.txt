@@ -3,17 +3,11 @@ cmake_minimum_required (VERSION 3.10.2)
  
 # Set project name
 project (Duality)
-# Set CMake modules search path
-set (CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/Modules)
-# Include UrhoCommon.cmake module after setting project name
-include (UrhoCommon)
-# Define target name
-set (TARGET_NAME Reviver)
 
-# Define source files
-#define_source_files ()
+include (${CMAKE_SOURCE_DIR}/cmake/Urho3D.cmake)
 
-add_subdirectory(src)
-
-# Setup target with resource copying
-#setup_main_executable ()
+if (URHO3D_HOME)
+	add_subdirectory(src)
+else ()
+	message ("!! Duality - wait to add source because URHO3D_HOME is undefined here !")
+endif ()
