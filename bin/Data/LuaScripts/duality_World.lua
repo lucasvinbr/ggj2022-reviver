@@ -129,8 +129,9 @@ local flippedObstacleDatas = {
 
 
 function SetupCraveiContent()
+    local contentXml = cache:GetResource("XMLFile", "Objects/duality/cravei_content.xml")
     ---@type Node
-    craveiContent = Scene_:InstantiateXML("Data/Objects/duality/cravei_content.xml", Vector3.ZERO, Quaternion.IDENTITY)
+    craveiContent = Scene_:InstantiateXML(contentXml:GetRoot(), Vector3.ZERO, Quaternion.IDENTITY)
     craveiContent:SetScale(0)
 end
 
@@ -618,16 +619,14 @@ function EndGame(victory)
 
         if victory then
             TimesWon = TimesWon + 1
+            if TimesWon % SHOW_CRAVEI_LEVEL_INTERVAL == 0 then
+                DoCraveiProcedure()
+            end
         else
             PlayOneShotSound("Music/duality/gameplaytransition.ogg", 0.65, 0)
-        end
-
-        if TimesWon % SHOW_CRAVEI_LEVEL_INTERVAL == 0 then
-            DoCraveiProcedure()
-        else
             uiManager.ShowUI("Endgame", gameEndData)
         end
-        
+
     end
 end
 
